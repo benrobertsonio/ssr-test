@@ -3,5 +3,5 @@ module.exports = {
         siteUrl: 'https://www.yourdomain.tld',
         title: 'ssr-test',
     },
-    plugins: [],
+    plugins: [`gatsby-plugin-gatsby-cloud`],
 }
