@@ -29,6 +29,7 @@ export async function getServerData() {
   const res = await fetch(`https://dog.ceo/api/breeds/image/random`)
   const data = await res.json()
   return {
+    status: 200,
     props: {
       dogImage: data,
       somevalue: `ben`,
