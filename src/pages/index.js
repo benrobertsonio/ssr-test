@@ -1,5 +1,7 @@
 import * as React from "react"
 
+const someVar = process.env.GATSBY_SOME_VAR
+
 // styles
 const pageStyles = {
   color: "#232129",

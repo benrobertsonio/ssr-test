@@ -9,13 +9,15 @@ const Page = ({ serverData }) => {
   // Use dogImage in your page...
 
   const reactScope = process.env.VARIABLE_B;
+  const gatsbyReactScope = process.env.GATSBY_REACT_SCOPE;
 
   return (
     <>
       <h2>React Component Data</h2>
       <pre>{JSON.stringify({
         globalScope,
-        reactScope
+        reactScope,
+        gatsbyReactScope
       }, null, 4)}</pre>
       <h2>getServerData</h2>
       <pre>{JSON.stringify(serverData, null, 4)}</pre>
@@ -25,6 +27,7 @@ const Page = ({ serverData }) => {
 export async function getServerData() {
 
   const variableD = process.env.VARIABLE_D;
+  const gatsbyVariableA = process.env.GATSBY_VARIABLE_A;
 
   const res = await fetch(`https://dog.ceo/api/breeds/image/random`)
   const data = await res.json()
@@ -35,7 +38,8 @@ export async function getServerData() {
       somevalue: `ben`,
       variableC: process.env.VARIABLE_C,
       variableD: variableD || 'false',
-      variableF
+      variableF,
+      gatsbyVariableA,
       // testVariable: test2,
       // gatsbyTestVariable: test,
     },
